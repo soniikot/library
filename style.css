@@ -3,14 +3,53 @@ h1{
 }
 
 div{
-    border:1px solid black;
+   /*border:1px solid black;*/
 }
 
 .wrapper{
-    display:flex;
+ display:flex;
     height:100vh;
+    
 }
 
 .bookCard{
     background-color: yellow;
 }
+.control{
+  margin:20px;
+  text-align: center;
+  width:300px;
+}
+
+input, select {
+    width: 100%;
+    padding: 5px 5px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+ 
+input[radio]{
+    margin-left:1px;
+}
+  
+
+  .radio{
+    padding-left:50px;
+    padding-right:50px;
+   
+    display: flex;
+  align-items: center;
+  }
+
+  button{
+    margin:20px;
+    padding:5px;
+    padding-left:20px;
+    padding-right:20px;
+    background-color: rgb(244, 141, 196);
+    border-radius:5px ;
+  }
