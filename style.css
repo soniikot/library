@@ -1,5 +1,15 @@
+*{
+    margin:0;
+  
+  
+}
+
 h1{
     text-align: center;
+    padding-top:40px;
+    margin:0;
+    background-color:blanchedalmond ;
+    height:50px;
 }
 
 div{
@@ -13,12 +23,15 @@ div{
 }
 
 .bookCard{
-    background-color: yellow;
+    font-size: 20px;
+    margin:50px;
 }
 .control{
   margin:20px;
   text-align: center;
   width:300px;
+  background-color: blanchedalmond;
+  margin:0;
 }
 
 input, select {
@@ -31,11 +44,6 @@ input, select {
     box-sizing: border-box;
   }
 
- 
-input[radio]{
-    margin-left:1px;
-}
-  
 
   .radio{
     padding-left:50px;

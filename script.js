@@ -13,23 +13,37 @@ this.info =function(){
   function addBookToLibrary(book) {
    myLibrary.unshift(book);
   }
+const button = document.getElementById('addButton')
 
-  function displayTheBook(myLibrary){
-for (i=0; i<myLibrary.length; i++){
+inputArray=[]
+
+
+  document.getElementById('addButton').onclick = function(){
+    event.preventDefault();
+   let title = document.getElementById("title");
+   let author = document.getElementById("author");
+   let numberOfPages = document.getElementById("number_of_pages");
+   let status = document.getElementById("status") ;
+   let book = new Book (title.value, author.value,numberOfPages.value,status.value)
+   addBookToLibrary(book);
+   displayTheBook(book);
+
+  }
+
+
+  function displayTheBook(book){
+
     const books = document.querySelector('.books')
     const bookCard = document.createElement("div");
     bookCard.classList.add("bookCard");
-    bookCard.innerHTML=myLibrary[i].info(); 
+    bookCard.innerHTML=book.info(); 
    books.appendChild(bookCard);
+  
   }
-  }
-  const theHobbit= new Book('The Hobbit','J.R.R. Tolkien','295',false)
-const theRightStuff= new Book('The Right Stuff', 'Tom Wolfe','352',false)
 
-  addBookToLibrary(theRightStuff);
-addBookToLibrary(theHobbit);
-console.log(myLibrary);
- displayTheBook(myLibrary);
+
+  funcion addRemoveButton()
+ 
 
 
 
