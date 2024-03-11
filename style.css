@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+}
+
+div{
+    border:1px solid black;
+}
+
+.wrapper{
+    display:flex;
+    height:100vh;
+}
+
+.bookCard{
+    background-color: yellow;
+}
