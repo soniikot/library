@@ -1,5 +1,7 @@
 const myLibrary = [];
 
+
+
 function Book(title, author, numberOfPages, status) {
    this.title = title,
    this.author = author,
@@ -27,6 +29,8 @@ inputArray=[]
    let book = new Book (title.value, author.value,numberOfPages.value,status.value)
    addBookToLibrary(book);
    displayTheBook(book);
+   
+   
 
   }
 
@@ -38,13 +42,22 @@ inputArray=[]
     bookCard.classList.add("bookCard");
     bookCard.innerHTML=book.info(); 
    books.appendChild(bookCard);
+   const removeButton = document.createElement("button");
+   bookCard.appendChild(removeButton);
+  removeButton.id = 'removeButton';
+  removeButton.innerHTML='Remove'; 
   
   }
 
 
-  funcion addRemoveButton()
- 
+  removeButton.addEventListener('click', () => {
+    books.removechild(bookCard);
+  })
 
+
+ 
+ 
+ 
 
 
 
