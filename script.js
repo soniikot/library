@@ -45,13 +45,20 @@ const button = document.getElementById('addButton')
     bookCard.classList.add("bookCard");
     bookCard.innerHTML=book.info(); 
    books.appendChild(bookCard);
-   checkValue();
-   /*const checkStatus = document.createElement('input')
-    checkStatus.type = 'checkbox';
-    checkStatus.name = "status";
-let label = document.createElement('label');
-label.appendChild(document.createTextNode('This is the label for checkbox.'));
-    bookCard.appendChild(checkStatus);*/
+  
+
+   let checkStatus = document.createElement("button");
+   checkStatus.id = 'removeButton';
+   checkStatus.innerHTML= checkValue();
+   bookCard.appendChild(checkStatus);
+  checkStatus.addEventListener('click', () => {
+    if (checkStatus === "read") {
+        checkStatus.innerHTML = "not read";
+      } else {checkStatus.innerHTML = "read"};
+  ;
+  });
+    
+
    const removeButton = document.createElement("button");
    bookCard.appendChild(removeButton);
   removeButton.id = 'removeButton';
@@ -66,16 +73,14 @@ label.appendChild(document.createTextNode('This is the label for checkbox.'));
 function checkValue(){
    const checkBox=document.getElementById('status');
   if (checkBox.checked){
-    return true;
+    return 'read';
   }
     else{
-       return false;
+       return 'not read yet';
     }
   }
 
-
-
-
+ 
 
 
  
@@ -83,5 +88,3 @@ function checkValue(){
  
 
 
-
-  
