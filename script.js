@@ -52,7 +52,7 @@ const button = document.getElementById('addButton')
    checkStatus.innerHTML= checkValue();
    bookCard.appendChild(checkStatus);
   checkStatus.addEventListener('click', () => {
-    if (checkStatus === "read") {
+    if (checkStatus.innerHTML === "read") {
         checkStatus.innerHTML = "not read";
       } else {checkStatus.innerHTML = "read"};
   ;
@@ -76,7 +76,7 @@ function checkValue(){
     return 'read';
   }
     else{
-       return 'not read yet';
+       return 'not read';
     }
   }
 
