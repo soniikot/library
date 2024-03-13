@@ -1,5 +1,8 @@
 const myLibrary = [];
-
+const books = document.querySelector('.books')
+const removeButton = document.createElement("button");
+const bookCard = document.createElement("div");
+    
 
 
 function Book(title, author, numberOfPages, status) {
@@ -17,7 +20,7 @@ this.info =function(){
   }
 const button = document.getElementById('addButton')
 
-inputArray=[]
+
 
 
   document.getElementById('addButton').onclick = function(){
@@ -25,8 +28,8 @@ inputArray=[]
    let title = document.getElementById("title");
    let author = document.getElementById("author");
    let numberOfPages = document.getElementById("number_of_pages");
-   let status = document.getElementById("status") ;
-   let book = new Book (title.value, author.value,numberOfPages.value,status.value)
+   let status = checkValue();
+   let book = new Book (title.value, author.value,numberOfPages.value,status)
    addBookToLibrary(book);
    displayTheBook(book);
    
@@ -37,22 +40,42 @@ inputArray=[]
 
   function displayTheBook(book){
 
-    const books = document.querySelector('.books')
+    
     const bookCard = document.createElement("div");
     bookCard.classList.add("bookCard");
     bookCard.innerHTML=book.info(); 
    books.appendChild(bookCard);
+   checkValue();
+   /*const checkStatus = document.createElement('input')
+    checkStatus.type = 'checkbox';
+    checkStatus.name = "status";
+let label = document.createElement('label');
+label.appendChild(document.createTextNode('This is the label for checkbox.'));
+    bookCard.appendChild(checkStatus);*/
    const removeButton = document.createElement("button");
    bookCard.appendChild(removeButton);
   removeButton.id = 'removeButton';
   removeButton.innerHTML='Remove'; 
+  removeButton.addEventListener('click', () => {
+    books.removeChild(bookCard);
+    
+  });
   
   }
 
+function checkValue(){
+   const checkBox=document.getElementById('status');
+  if (checkBox.checked){
+    return true;
+  }
+    else{
+       return false;
+    }
+  }
 
-  removeButton.addEventListener('click', () => {
-    books.removechild(bookCard);
-  })
+
+
+
 
 
  
