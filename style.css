@@ -46,11 +46,6 @@ input {
   }
 
 
-  input {
-   
-  }
-
-
   
 
   button{
@@ -58,7 +53,7 @@ input {
     padding:5px;
     padding-left:20px;
     padding-right:20px;
-    background-color: rgb(244, 141, 196);
+    background-color: rgb(244, 171, 210);
     border-radius:5px ;
   }
 
@@ -66,4 +61,21 @@ input {
    margin-top: 10px;
   }
 
-  
+  .bookCard{
+    display:flex;
+    wrap:nowrap;
+ align-items: center;
+ border: 1px solid black;
+ padding-left: 20px;
+
+  }
+
+  #checkStatus{
+    background-color: white;
+    margin:20px;
+    padding:5px;
+    padding-left:20px;
+    padding-right:20px;
+   
+    border-radius:5px ;
+  }

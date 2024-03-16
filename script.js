@@ -11,7 +11,7 @@ function Book(title, author, numberOfPages, status) {
    this.numberOfPages = numberOfPages,
    this.status = status,
 this.info =function(){
-  return (`${this.title} by ${this.author}, ${numberOfPages} pages, ${status==true ? 'read' : 'not read yet'}`)
+  return (`${this.title} by ${this.author}, ${numberOfPages} pages`)
   }
 }
   
@@ -48,7 +48,7 @@ const button = document.getElementById('addButton')
   
 
    let checkStatus = document.createElement("button");
-   checkStatus.id = 'removeButton';
+   checkStatus.id = 'checkStatus';
    checkStatus.innerHTML= checkValue();
    bookCard.appendChild(checkStatus);
   checkStatus.addEventListener('click', () => {
@@ -73,10 +73,10 @@ const button = document.getElementById('addButton')
 function checkValue(){
    const checkBox=document.getElementById('status');
   if (checkBox.checked){
-    return 'read';
+    return 'Read';
   }
     else{
-       return 'not read';
+       return 'Not read';
     }
   }
 
