@@ -5,15 +5,18 @@ const bookCard = document.createElement("div");
     
 
 
-function Book(title, author, numberOfPages, status) {
+class Book{
+  constructor(title, author, numberOfPages, status) {
    this.title = title,
    this.author = author,
    this.numberOfPages = numberOfPages,
-   this.status = status,
-this.info =function(){
-  return (`${this.title} by ${this.author}, ${numberOfPages} pages`)
+   this.status = status;
+  }
+info(){
+  return (`${this.title} by ${this.author}, ${this.numberOfPages} pages`)
   }
 }
+
   
   function addBookToLibrary(book) {
    myLibrary.unshift(book);
