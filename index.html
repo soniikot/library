@@ -10,21 +10,21 @@
 <h1>My library</h1>
     <div class="wrapper">
         <div class="control">
-            <form>
+            <form id="addNewBook">
           
                 <label for="title">Title:</label>
-                <input type="text" id="title">
+                <input type="text" id="title" required>
         
                 <label for="author">Author:</label>
                 <input type="text" id="author">
 
                 <label for="number_of_pages">Pages:</label>
-                <input type="number" id="number_of_pages">
+                <input type="number" id="number_of_pages" required>
            
                <label for="form-read">Check if you read it</label>
                 <input type="checkbox" id="status" name="status" value="true" /> 
                     
-                    <button id="addButton">Add</button>
+                    <button type="submit" id="addButton">Add</button>
                 </form>
              
 
